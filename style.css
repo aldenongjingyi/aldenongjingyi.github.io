@@ -139,7 +139,7 @@ h4 { font-size: var(--text-lg); }
 }
 
 section {
-  padding: var(--space-5xl) 0;
+  padding: var(--space-3xl) 0;
 }
 
 .section-label {
@@ -245,7 +245,7 @@ section {
 }
 
 .hero-content {
-  padding: var(--space-4xl) 0;
+  padding: var(--space-2xl) 0;
 }
 
 .hero-label {
@@ -632,7 +632,7 @@ section {
 /* --- Photography --- */
 .photo-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: var(--space-sm);
 }
 
@@ -923,7 +923,7 @@ section {
   }
 
   section {
-    padding: var(--space-3xl) 0;
+    padding: var(--space-2xl) 0;
   }
 }
 
