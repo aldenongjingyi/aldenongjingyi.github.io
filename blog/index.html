@@ -6,19 +6,14 @@
   <title>Blog — Alden Ong Jing Yi</title>
   <meta name="description" content="Thoughts on software engineering, machine learning, and building things.">
   <meta name="author" content="Alden Ong Jing Yi">
+  <meta name="theme-color" content="#090A0C">
   <meta property="og:title" content="Blog — Alden Ong Jing Yi">
   <meta property="og:description" content="Thoughts on software engineering, machine learning, and building things.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://aldenongjingyi.github.io/blog/">
-  <script>
-    (function() {
-      var theme = localStorage.getItem('theme');
-      if (!theme) {
-        theme = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
-      }
-      document.documentElement.setAttribute('data-theme', theme);
-    })();
-  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../style.css">
 </head>
 <body>
@@ -34,7 +29,6 @@
         <li><a href="/#photography">Photography</a></li>
         <li><a href="/blog/">Blog</a></li>
         <li><a href="/#contact">Contact</a></li>
-        <li><button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">dark</button></li>
       </ul>
       <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">&#9776;</button>
     </div>

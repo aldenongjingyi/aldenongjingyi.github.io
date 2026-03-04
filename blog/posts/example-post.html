@@ -6,19 +6,14 @@
   <title>Building a Portfolio with Zero Dependencies — Alden Ong Jing Yi</title>
   <meta name="description" content="Why I chose vanilla HTML/CSS/JS over frameworks for my personal site, and what I learned in the process.">
   <meta name="author" content="Alden Ong Jing Yi">
+  <meta name="theme-color" content="#090A0C">
   <meta property="og:title" content="Building a Portfolio with Zero Dependencies">
   <meta property="og:description" content="Why I chose vanilla HTML/CSS/JS over frameworks for my personal site, and what I learned in the process.">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://aldenongjingyi.github.io/blog/posts/example-post.html">
-  <script>
-    (function() {
-      var theme = localStorage.getItem('theme');
-      if (!theme) {
-        theme = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
-      }
-      document.documentElement.setAttribute('data-theme', theme);
-    })();
-  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../../style.css">
 </head>
 <body>
@@ -34,7 +29,6 @@
         <li><a href="/#photography">Photography</a></li>
         <li><a href="/blog/">Blog</a></li>
         <li><a href="/#contact">Contact</a></li>
-        <li><button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">dark</button></li>
       </ul>
       <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">&#9776;</button>
     </div>
@@ -55,10 +49,10 @@
         <p>Frameworks are powerful, but for a personal portfolio with three pages, they introduce unnecessary complexity. No <code>node_modules</code>, no build step, no configuration files. Just HTML, CSS, and a small amount of JavaScript.</p>
 
         <h2>The Stack</h2>
-        <p>The entire site runs on vanilla HTML, CSS custom properties for theming, and about 70 lines of JavaScript for the theme toggle and scroll animations. It deploys directly to GitHub Pages with zero configuration.</p>
+        <p>The entire site runs on vanilla HTML, CSS custom properties for theming, and about 50 lines of JavaScript for scroll animations. It deploys directly to GitHub Pages with zero configuration.</p>
 
         <h2>What I Learned</h2>
-        <p>Modern CSS is remarkably capable. <code>clamp()</code> for fluid typography, CSS Grid for layout, custom properties for theming — most of what frameworks provide can be achieved natively with less overhead.</p>
+        <p>Modern CSS is remarkably capable. <code>clamp()</code> for fluid typography, CSS Grid for layout, custom properties for design tokens — most of what frameworks provide can be achieved natively with less overhead.</p>
       </div>
     </div>
   </article>

@@ -6,6 +6,7 @@
   <title>Alden Ong Jing Yi — Fullstack Software Developer</title>
   <meta name="description" content="Fullstack software developer with a CS degree, MBA, and machine learning research background. Building systems that work.">
   <meta name="author" content="Alden Ong Jing Yi">
+  <meta name="theme-color" content="#090A0C">
 
   <!-- OpenGraph -->
   <meta property="og:title" content="Alden Ong Jing Yi — Fullstack Software Developer">
@@ -44,16 +45,10 @@
   }
   </script>
 
-  <!-- Flash-free theme initialization -->
-  <script>
-    (function() {
-      var theme = localStorage.getItem('theme');
-      if (!theme) {
-        theme = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
-      }
-      document.documentElement.setAttribute('data-theme', theme);
-    })();
-  </script>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
 </head>
@@ -71,7 +66,6 @@
         <li><a href="#photography">Photography</a></li>
         <li><a href="/blog/">Blog</a></li>
         <li><a href="#contact">Contact</a></li>
-        <li><button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">dark</button></li>
       </ul>
       <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">&#9776;</button>
     </div>
@@ -81,7 +75,7 @@
   <section class="hero">
     <div class="container">
       <div class="hero-content">
-        <p class="hero-label mono">fullstack software developer</p>
+        <p class="hero-label">fullstack software developer</p>
         <h1 class="hero-name">Alden Ong<br>Jing Yi</h1>
         <p class="hero-tagline">Building systems at the intersection of engineering, data, and design. CS + MBA. Based in Kuala Lumpur.</p>
         <div class="hero-cta">
@@ -99,7 +93,7 @@
       <h2 class="section-title">About</h2>
       <p class="about-summary">Software developer with a dual foundation in computer science and business. I build fullstack applications, train machine learning models, and ship production systems. Currently developing software at Map Seventy Two while completing an MBA at Taylor's University.</p>
 
-      <h3 style="font-size: var(--text-lg); margin-bottom: var(--space-lg);">Experience</h3>
+      <h3 style="margin-bottom: var(--space-lg);">Experience</h3>
       <div class="timeline">
         <div class="timeline-item">
           <p class="timeline-role">Software Developer</p>
@@ -137,7 +131,7 @@
       </div>
 
       <div class="education">
-        <h3 style="font-size: var(--text-lg); margin-bottom: var(--space-lg);">Education</h3>
+        <h3 style="margin-bottom: var(--space-lg);">Education</h3>
         <div class="education-item">
           <p class="education-degree">MBA — Taylor's University</p>
           <p class="education-note">Postgraduate Bursary Recipient · 2024–2026</p>
@@ -211,7 +205,7 @@
 
         <div class="project-card" onclick="this.classList.toggle('expanded')">
           <h3 class="project-card-title">This Portfolio</h3>
-          <p class="project-card-desc">Minimal, dark-first portfolio site. Vanilla HTML/CSS/JS. Zero dependencies. Lighthouse optimized.</p>
+          <p class="project-card-desc">Dark-first portfolio site with a premium design language. Vanilla HTML/CSS/JS. Zero dependencies.</p>
           <div class="project-tags">
             <span class="project-tag">HTML</span>
             <span class="project-tag">CSS</span>
@@ -219,7 +213,7 @@
           </div>
           <p class="project-expand-hint mono">click to expand</p>
           <div class="project-detail">
-            <p class="project-detail-text">Built from scratch with no frameworks, no build tools, and no dependencies. Features a dark/light theme toggle with system preference detection, scroll-triggered animations via Intersection Observer, expandable project cards, and a static blog system. Deployed on GitHub Pages.</p>
+            <p class="project-detail-text">Built from scratch with no frameworks, no build tools, and no dependencies. Features scroll-triggered animations via Intersection Observer, expandable project cards, and a static blog system. Deployed on GitHub Pages.</p>
             <div class="project-links">
               <a href="https://github.com/aldenongjingyi/aldenongjingyi.github.io" class="project-link">Source ↗</a>
             </div>
@@ -239,7 +233,7 @@
 
         <div class="research-card">
           <p class="research-label">Capstone Research · Sunway University</p>
-          <h3 class="research-title mono">Using Smartphone Sensor Data to Recognize Human Activity</h3>
+          <h3 class="research-title">Using Smartphone Sensor Data to Recognize Human Activity</h3>
           <p class="research-desc">Investigated the application of machine learning classification algorithms to smartphone accelerometer and gyroscope data for real-time human activity recognition. Trained and evaluated multiple models, optimized for mobile deployment, and built a working Android prototype for on-device inference.</p>
           <div class="research-methods">
             <span class="project-tag">Machine Learning</span>

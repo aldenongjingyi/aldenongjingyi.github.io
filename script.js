@@ -1,24 +1,3 @@
-// Theme Toggle
-(function() {
-  var toggle = document.getElementById('themeToggle');
-  if (!toggle) return;
-
-  function updateLabel() {
-    var current = document.documentElement.getAttribute('data-theme');
-    toggle.textContent = current === 'dark' ? 'light' : 'dark';
-  }
-
-  toggle.addEventListener('click', function() {
-    var current = document.documentElement.getAttribute('data-theme');
-    var next = current === 'dark' ? 'light' : 'dark';
-    document.documentElement.setAttribute('data-theme', next);
-    localStorage.setItem('theme', next);
-    updateLabel();
-  });
-
-  updateLabel();
-})();
-
 // Scroll Reveal (Intersection Observer)
 (function() {
   var reveals = document.querySelectorAll('.reveal');
@@ -66,4 +45,23 @@
       navLinks.classList.remove('open');
     });
   });
+})();
+
+// Nav background on scroll
+(function() {
+  var nav = document.querySelector('.nav');
+  if (!nav) return;
+
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 50) {
+      nav.style.borderBottomColor = 'rgba(255, 255, 255, 0.08)';
+    } else {
+      nav.style.borderBottomColor = 'transparent';
+    }
+  }, { passive: true });
+
+  // Initial state
+  if (window.scrollY <= 50) {
+    nav.style.borderBottomColor = 'transparent';
+  }
 })();
