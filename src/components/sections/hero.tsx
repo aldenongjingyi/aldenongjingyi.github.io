@@ -59,11 +59,11 @@ export function HeroSection() {
   return (
     <section
       id="about"
-      className="relative min-h-screen flex items-center px-6 lg:px-16"
+      className="relative min-h-screen flex items-center justify-center px-6 lg:px-16"
     >
       <ParticleDots />
 
-      <div className="w-full max-w-[600px] flex flex-col items-start text-left py-24">
+      <div className="w-full max-w-[680px] mx-auto flex flex-col items-start text-left py-24">
         {/* Avatar */}
         <div className="animate-in stagger-1 relative mb-6">
           <div
