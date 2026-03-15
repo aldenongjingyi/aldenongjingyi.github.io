@@ -36,7 +36,7 @@ function CurrentlyWidget() {
     <div
       className="animate-in w-full rounded-lg"
       style={{
-        maxWidth: 360,
+        maxWidth: 340,
         background: "#0d0d0d",
         border: "1px solid #1f1f1f",
         borderRadius: 8,
@@ -73,6 +73,7 @@ export function HeroSection() {
     <section
       id="about"
       className="relative min-h-screen flex items-center"
+      style={{ paddingBottom: 80 }}
     >
       <ParticleDots />
 
@@ -82,8 +83,8 @@ export function HeroSection() {
 
           {/* ── Left column ── */}
           <div
-            className="flex flex-col items-center md:items-start text-center md:text-left w-full md:w-[38%] shrink-0"
-            style={{ gap: 0 }}
+            className="flex flex-col items-center md:items-start text-center md:text-left w-full md:w-[42%] shrink-0"
+            style={{ gap: 20 }}
           >
             {/* Avatar */}
             <div className="animate-in stagger-1 relative">
@@ -104,7 +105,7 @@ export function HeroSection() {
             {/* Name */}
             <h1
               className="animate-in stagger-2 font-mono font-bold text-[#f5f5f5] glow-white"
-              style={{ fontSize: "clamp(32px, 4vw, 48px)", letterSpacing: "-0.02em", marginTop: 16 }}
+              style={{ fontSize: "clamp(32px, 4vw, 48px)", letterSpacing: "-0.02em" }}
             >
               Alden Ong
             </h1>
@@ -112,13 +113,13 @@ export function HeroSection() {
             {/* Role */}
             <p
               className="animate-in stagger-3 font-mono text-[#a78bfa] glow-purple"
-              style={{ fontSize: 16, letterSpacing: "0.08em", marginTop: 4 }}
+              style={{ fontSize: 16, letterSpacing: "0.08em" }}
             >
               fullstack software <span className="text-[#8b6fdb]">developer.</span>
             </p>
 
             {/* Education */}
-            <div className="animate-in stagger-3" style={{ marginTop: 12 }}>
+            <div className="animate-in stagger-3">
               <p className="font-mono text-[#555]" style={{ fontSize: 13, lineHeight: 1.6 }}>
                 BSc (Hons) Computer Science{" "}
                 <span className="text-[#555]" style={{ fontSize: 11 }}>Sunway University</span>
@@ -130,7 +131,7 @@ export function HeroSection() {
             </div>
 
             {/* Social icons */}
-            <div className="animate-in stagger-5 flex items-center" style={{ gap: 20, marginTop: 16 }}>
+            <div className="animate-in stagger-5 flex items-center" style={{ gap: 20 }}>
               <a href="https://github.com/aldenongjingyi" target="_blank" rel="noopener noreferrer" className="text-[#555] hover:text-[#aaa] transition-colors duration-200" aria-label="GitHub"><Github size={18} /></a>
               <a href="https://linkedin.com/in/aldenong123" target="_blank" rel="noopener noreferrer" className="text-[#555] hover:text-[#aaa] transition-colors duration-200" aria-label="LinkedIn"><Linkedin size={18} /></a>
               <a href="https://www.instagram.com/aldenojy/" target="_blank" rel="noopener noreferrer" className="text-[#555] hover:text-[#aaa] transition-colors duration-200" aria-label="Instagram"><Instagram size={18} /></a>
@@ -138,7 +139,7 @@ export function HeroSection() {
           </div>
 
           {/* ── Right column ── */}
-          <div className="flex flex-col flex-1 w-full" style={{ gap: 32 }}>
+          <div className="flex flex-col flex-1 w-full" style={{ gap: 32, paddingTop: 8 }}>
             {/* Bio */}
             <div className="animate-in stagger-4">
               <p style={{ fontSize: 17, lineHeight: 1.8, letterSpacing: "0.01em", color: "#999", maxWidth: 480 }}>
