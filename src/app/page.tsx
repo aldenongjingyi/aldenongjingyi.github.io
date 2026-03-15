@@ -7,6 +7,7 @@ import { ExperienceSection } from "@/components/sections/experience";
 import { ProjectsSection } from "@/components/sections/projects";
 import { SkillsSection } from "@/components/sections/skills";
 import { ContactSection } from "@/components/sections/contact";
+import { ReelCTA } from "@/components/sections/reel-cta";
 import { ScrollToTop } from "@/components/scroll-to-top";
 import { useScrollReveal } from "@/lib/use-scroll-reveal";
 
@@ -22,6 +23,7 @@ export default function Home() {
         <ExperienceSection />
         <ProjectsSection />
         <SkillsSection />
+        <ReelCTA />
         <ContactSection />
       </main>
       <ScrollToTop />
