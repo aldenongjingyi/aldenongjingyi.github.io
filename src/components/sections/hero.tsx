@@ -63,7 +63,7 @@ export function HeroSection() {
     >
       <ParticleDots />
 
-      <div className="w-full max-w-[600px] flex flex-col items-start text-left" style={{ paddingTop: "40vh", paddingBottom: "10vh" }}>
+      <div className="w-full max-w-[600px] flex flex-col items-start text-left py-24">
         {/* Avatar */}
         <div className="animate-in stagger-1 relative mb-6">
           <div
