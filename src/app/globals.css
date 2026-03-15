@@ -24,22 +24,22 @@
 }
 
 :root {
-  --background: #0a0a0a;
-  --foreground: #f5f5f5;
-  --card: #111111;
-  --card-foreground: #f5f5f5;
-  --border: #1f1f1f;
-  --muted: #111111;
+  --background: #08090d;
+  --foreground: #f0f0f0;
+  --card: #0e1018;
+  --card-foreground: #f0f0f0;
+  --border: #1a1a2e;
+  --muted: #0e1018;
   --muted-foreground: #888888;
-  --accent: #a78bfa;
-  --accent-foreground: #0a0a0a;
+  --accent: #6366f1;
+  --accent-foreground: #ffffff;
   --accent-green: #22c55e;
-  --primary: #f5f5f5;
-  --primary-foreground: #0a0a0a;
-  --ring: #a78bfa;
+  --primary: #f0f0f0;
+  --primary-foreground: #08090d;
+  --ring: #6366f1;
   --radius: 0;
   --text-faint: #444444;
-  --surface: #111111;
+  --surface: #0e1018;
 }
 
 @layer base {
@@ -64,17 +64,17 @@
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: #222;
+  background: #1a1a2e;
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #333;
+  background: #2a2a3e;
 }
 
-/* Selection — purple accent */
+/* Selection */
 ::selection {
-  background: rgba(167, 139, 250, 0.2);
-  color: #f5f5f5;
+  background: rgba(99, 102, 241, 0.25);
+  color: #f0f0f0;
 }
 
 /* Fade-in animation */
@@ -100,7 +100,7 @@
 .stagger-5 { animation-delay: 240ms; }
 .stagger-6 { animation-delay: 300ms; }
 
-/* Scroll reveal — elements start slightly visible, revealed by IntersectionObserver */
+/* Scroll reveal */
 .reveal {
   opacity: 0.3;
   transform: translateY(16px);
@@ -109,40 +109,6 @@
 .reveal.visible {
   opacity: 1;
   transform: translateY(0);
-}
-
-/* Particle dots — CSS only hero background */
-.particles {
-  position: absolute;
-  inset: 0;
-  overflow: hidden;
-  pointer-events: none;
-}
-.particles span {
-  position: absolute;
-  width: 2px;
-  height: 2px;
-  background: #f5f5f5;
-  border-radius: 50%;
-  opacity: 0;
-  animation: particle-drift linear infinite;
-}
-
-@keyframes particle-drift {
-  0% {
-    opacity: 0;
-    transform: translateY(0) translateX(0);
-  }
-  10% {
-    opacity: 0.3;
-  }
-  90% {
-    opacity: 0.3;
-  }
-  100% {
-    opacity: 0;
-    transform: translateY(-100px) translateX(30px);
-  }
 }
 
 /* Scroll indicator bounce */
@@ -154,11 +120,13 @@
     transform: translateY(6px);
   }
 }
-.animate-bounce-down {
+
+.hero-scroll-indicator {
+  transform: translateX(-50%);
   animation: bounce-down 2s ease-in-out infinite;
 }
 
-/* Pulse dot — currently widget work status */
+/* Pulse dot */
 @keyframes pulse-dot {
   0%, 100% {
     opacity: 1;
@@ -171,28 +139,30 @@
   animation: pulse-dot 2s ease-in-out infinite;
 }
 
-/* Hero scroll indicator — centered at bottom with bounce */
-.hero-scroll-indicator {
-  transform: translateX(-50%);
-  animation: bounce-down 2s ease-in-out infinite;
+/* Hero name gradient — lavender to soft purple */
+.hero-name-gradient {
+  background: linear-gradient(135deg, #e0d4ff 0%, #c4b5fd 40%, #a78bfa 70%, #8b7cf6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 /* Glow utilities */
 .glow-purple {
-  text-shadow: 0 0 30px rgba(167, 139, 250, 0.4), 0 0 60px rgba(167, 139, 250, 0.15);
+  text-shadow: 0 0 30px rgba(99, 102, 241, 0.4), 0 0 60px rgba(99, 102, 241, 0.15);
 }
 
 .glow-white {
-  text-shadow: 0 0 40px rgba(245, 245, 245, 0.15), 0 0 80px rgba(245, 245, 245, 0.05);
+  text-shadow: 0 0 40px rgba(240, 240, 240, 0.15), 0 0 80px rgba(240, 240, 240, 0.05);
 }
 
 .glow-box-purple {
-  box-shadow: 0 0 30px rgba(167, 139, 250, 0.1), 0 0 60px rgba(167, 139, 250, 0.05);
+  box-shadow: 0 0 30px rgba(99, 102, 241, 0.1), 0 0 60px rgba(99, 102, 241, 0.05);
 }
 
 /* Gradient text utility */
 .gradient-text {
-  background: linear-gradient(135deg, #a78bfa, #60a5fa);
+  background: linear-gradient(135deg, #6366f1, #818cf8);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

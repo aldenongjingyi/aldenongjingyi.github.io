@@ -64,13 +64,13 @@ export function SkillsSection() {
   const categories = Object.entries(techStack);
 
   return (
-    <section id="skills" className="pt-[80px] pb-0 bg-[#0d0d0d]" aria-label="Skills">
+    <section id="skills" className="pt-[80px] pb-0 bg-[#0a0b12]" aria-label="Skills">
       <div className="max-w-[960px] mx-auto px-6 lg:px-16">
         {/* Dramatic heading */}
         <div className="reveal mb-10">
           <h2 className="text-4xl sm:text-5xl font-bold text-[#f5f5f5] glow-white mb-2">
             what I{" "}
-            <span className="text-[#a78bfa] glow-purple">work with</span>
+            <span className="text-[#818cf8] glow-purple">work with</span>
           </h2>
         </div>
 
@@ -96,7 +96,7 @@ export function SkillsSection() {
                   return (
                     <span
                       key={skill}
-                      className="inline-flex items-center gap-1.5 px-3.5 py-2 bg-[#111] border border-[#1f1f1f] text-[#ccc] text-[15px] font-mono hover:border-[#333] hover:text-[#f5f5f5] transition-all duration-200"
+                      className="inline-flex items-center gap-1.5 px-3.5 py-2 bg-[#0e1018] border border-[#1a1a2e] text-[#ccc] text-[15px] font-mono hover:border-[#333] hover:text-[#f5f5f5] transition-all duration-200"
                     >
                       {Icon ? (
                         <Icon size={14} className="text-[#888] shrink-0" />

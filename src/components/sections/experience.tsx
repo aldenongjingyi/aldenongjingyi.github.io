@@ -50,7 +50,7 @@ export function ExperienceSection() {
         <div className="reveal mb-14">
           <h2 className="text-4xl sm:text-5xl font-bold text-[#f5f5f5] glow-white mb-3">
             work{" "}
-            <span className="text-[#a78bfa] glow-purple">experience</span>
+            <span className="text-[#818cf8] glow-purple">experience</span>
           </h2>
           <p className="text-lg text-[#888]">
             where I&apos;ve built, shipped, and contributed.
@@ -66,7 +66,7 @@ export function ExperienceSection() {
               <div key={i} className="reveal">
                 {/* Divider (not on first) */}
                 {i > 0 && (
-                  <div className="border-t border-[#1f1f1f] mx-0 my-0" />
+                  <div className="border-t border-[#1a1a2e] mx-0 my-0" />
                 )}
 
                 <div className="flex flex-col sm:flex-row gap-6 sm:gap-10 py-8">
@@ -84,7 +84,7 @@ export function ExperienceSection() {
                     {/* Company | Role header */}
                     <div className="flex items-center gap-2 flex-wrap mb-1">
                       <h3 className="text-lg font-bold">
-                        <span className="text-[#a78bfa]">{exp.company}</span>
+                        <span className="text-[#818cf8]">{exp.company}</span>
                         <span className="text-[#444] mx-2">|</span>
                         <span className="text-[#f5f5f5]">{exp.role}</span>
                       </h3>
@@ -103,7 +103,7 @@ export function ExperienceSection() {
                           key={j}
                           className="flex items-start gap-3 text-[15px] text-[#999] leading-relaxed"
                         >
-                          <span className="text-[#a78bfa] mt-[6px] shrink-0 text-[8px]">&#9679;</span>
+                          <span className="text-[#818cf8] mt-[6px] shrink-0 text-[8px]">&#9679;</span>
                           {bullet}
                         </li>
                       ))}
@@ -114,7 +114,7 @@ export function ExperienceSection() {
                       {exp.tags.map((tag) => (
                         <span
                           key={tag}
-                          className="inline-flex items-center px-2.5 py-1 bg-[#141414] border border-[#1f1f1f] text-[#888] text-[11px] font-mono rounded hover:border-[#333] hover:text-[#ccc] transition-colors duration-200"
+                          className="inline-flex items-center px-2.5 py-1 bg-[#12131e] border border-[#1a1a2e] text-[#888] text-[11px] font-mono rounded hover:border-[#333] hover:text-[#ccc] transition-colors duration-200"
                         >
                           {tag}
                         </span>
@@ -128,7 +128,7 @@ export function ExperienceSection() {
         </div>
 
         {/* Footer link */}
-        <div className="reveal mt-8 pt-6 border-t border-[#1f1f1f] text-center">
+        <div className="reveal mt-8 pt-6 border-t border-[#1a1a2e] text-center">
           <a
             href="https://linkedin.com/in/aldenong123"
             target="_blank"
