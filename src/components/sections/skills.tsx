@@ -84,7 +84,7 @@ export function SkillsSection() {
               }`}
             >
               {/* Category label — prominent with left border */}
-              <p className="text-[11px] text-[#555] font-mono uppercase tracking-widest mb-3 border-l-2 border-[#333] pl-3">
+              <p className="text-[12px] text-[#555] font-mono uppercase tracking-widest mb-3 border-l-2 border-[#333] pl-3">
                 {category}
               </p>
 

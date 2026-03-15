@@ -74,8 +74,8 @@ export function ExperienceSection() {
                   <div className="sm:w-[180px] shrink-0 flex sm:flex-col items-center sm:items-start gap-4">
                     <CompanyLogo company={exp.company} />
                     <div className="sm:mt-1">
-                      <p className="text-[13px] font-mono text-[#888]">{exp.date}</p>
-                      <p className="text-[11px] font-mono text-[#444] mt-0.5">{exp.location}</p>
+                      <p className="text-sm font-mono text-[#888]">{exp.date}</p>
+                      <p className="text-[12px] font-mono text-[#444] mt-0.5">{exp.location}</p>
                     </div>
                   </div>
 
@@ -89,7 +89,7 @@ export function ExperienceSection() {
                         <span className="text-[#f5f5f5]">{exp.role}</span>
                       </h3>
                       {isCurrent && (
-                        <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 bg-[#22c55e]/10 text-[#22c55e] text-[11px] font-mono rounded-full">
+                        <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 bg-[#22c55e]/10 text-[#22c55e] text-[12px] font-mono rounded-full">
                           <span className="w-1.5 h-1.5 rounded-full bg-[#22c55e] pulse-dot" />
                           Current
                         </span>
@@ -101,7 +101,7 @@ export function ExperienceSection() {
                       {exp.bullets.map((bullet, j) => (
                         <li
                           key={j}
-                          className="flex items-start gap-3 text-[15px] text-[#999] leading-relaxed"
+                          className="flex items-start gap-3 text-base text-[#999] leading-relaxed"
                         >
                           <span className="text-[#a78bfa] mt-[6px] shrink-0 text-[8px]">&#9679;</span>
                           {bullet}
@@ -114,7 +114,7 @@ export function ExperienceSection() {
                       {exp.tags.map((tag) => (
                         <span
                           key={tag}
-                          className="inline-flex items-center px-2.5 py-1 bg-[#141414] border border-[#1f1f1f] text-[#888] text-[11px] font-mono rounded hover:border-[#333] hover:text-[#ccc] transition-colors duration-200"
+                          className="inline-flex items-center px-2.5 py-1 bg-[#141414] border border-[#1f1f1f] text-[#888] text-[12px] font-mono rounded hover:border-[#333] hover:text-[#ccc] transition-colors duration-200"
                         >
                           {tag}
                         </span>

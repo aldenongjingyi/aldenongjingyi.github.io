@@ -67,7 +67,7 @@ export function ProjectsSection() {
                     {project.title}
                   </h3>
 
-                  <p className="text-sm text-[#888] leading-relaxed mb-4">
+                  <p className="text-[15px] text-[#888] leading-relaxed mb-4">
                     {project.desc}
                   </p>
 
@@ -75,7 +75,7 @@ export function ProjectsSection() {
                     {project.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="inline-flex items-center px-2 py-0.5 bg-[#0a0a0a] border border-[#1f1f1f] text-[#888] text-[11px] font-mono"
+                        className="inline-flex items-center px-2 py-0.5 bg-[#0a0a0a] border border-[#1f1f1f] text-[#888] text-[12px] font-mono"
                       >
                         {tag}
                       </span>
@@ -83,7 +83,7 @@ export function ProjectsSection() {
                   </div>
 
                   <div className="flex items-center justify-between pt-3 border-t border-[#1f1f1f]">
-                    <span className={`inline-flex items-center gap-1.5 text-[11px] font-mono ${
+                    <span className={`inline-flex items-center gap-1.5 text-[12px] font-mono ${
                       project.status === "live" ? "text-[#22c55e]" : "text-[#888]"
                     }`}>
                       <span className={`w-1.5 h-1.5 rounded-full ${
