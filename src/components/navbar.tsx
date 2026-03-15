@@ -15,7 +15,7 @@ export function Navbar() {
 
   return (
     <>
-      <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-[#08090d]/60 lg:left-[256px]">
+      <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-[#0a0a0a]/60 lg:left-[256px]">
         <div className="px-6 h-12 flex items-center justify-between">
           {/* Left — Name with gradient asterisk */}
           <a
@@ -59,7 +59,7 @@ export function Navbar() {
 
       {/* Mobile fullscreen overlay */}
       {mobileOpen && (
-        <div className="fixed inset-0 z-[60] bg-[#08090d]/95 backdrop-blur-lg flex flex-col items-center justify-center">
+        <div className="fixed inset-0 z-[60] bg-[#0a0a0a]/95 backdrop-blur-lg flex flex-col items-center justify-center">
           <button
             onClick={() => setMobileOpen(false)}
             className="absolute top-4 right-6 p-2 text-[#888] hover:text-[#f5f5f5] transition-colors"

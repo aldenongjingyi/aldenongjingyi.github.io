@@ -18,7 +18,7 @@ export function ProjectsSection() {
         <div className="reveal mb-10">
           <h2 className="text-4xl sm:text-5xl font-bold text-[#f5f5f5] glow-white">
             projects{" "}
-            <span className="text-[#818cf8] glow-purple font-mono text-3xl sm:text-4xl">
+            <span className="text-[#a78bfa] glow-purple font-mono text-3xl sm:text-4xl">
               [{projects.length}]
             </span>
           </h2>
@@ -34,13 +34,13 @@ export function ProjectsSection() {
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="reveal block bg-[#0e1018] border border-[#1a1a2e] overflow-hidden hover:border-[#333] hover:-translate-y-0.5 transition-all duration-200 group"
+                className="reveal block bg-[#111] border border-[#1f1f1f] overflow-hidden hover:border-[#333] hover:-translate-y-0.5 transition-all duration-200 group"
               >
                 {/* Styled preview card */}
                 <div
                   className="relative h-48 flex items-center justify-center overflow-hidden"
                   style={{
-                    background: `linear-gradient(135deg, ${style.color}, #08090d)`,
+                    background: `linear-gradient(135deg, ${style.color}, #0a0a0a)`,
                   }}
                 >
                   {/* Dot grid overlay */}
@@ -75,14 +75,14 @@ export function ProjectsSection() {
                     {project.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="inline-flex items-center px-2 py-0.5 bg-[#08090d] border border-[#1a1a2e] text-[#888] text-[11px] font-mono"
+                        className="inline-flex items-center px-2 py-0.5 bg-[#0a0a0a] border border-[#1f1f1f] text-[#888] text-[11px] font-mono"
                       >
                         {tag}
                       </span>
                     ))}
                   </div>
 
-                  <div className="flex items-center justify-between pt-3 border-t border-[#1a1a2e]">
+                  <div className="flex items-center justify-between pt-3 border-t border-[#1f1f1f]">
                     <span className={`inline-flex items-center gap-1.5 text-[11px] font-mono ${
                       project.status === "live" ? "text-[#22c55e]" : "text-[#888]"
                     }`}>

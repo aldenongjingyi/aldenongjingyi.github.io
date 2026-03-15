@@ -36,7 +36,7 @@ export function ContactSection() {
         {/* Heading */}
         <div className="reveal mb-12">
           <h2 className="text-4xl sm:text-5xl font-bold text-[#f5f5f5] glow-white mb-2">
-            get in <span className="text-[#818cf8] glow-purple">touch</span>
+            get in <span className="text-[#a78bfa] glow-purple">touch</span>
           </h2>
           <p className="text-sm text-[#888]">
             Open to opportunities, collaborations, and conversations.
@@ -51,9 +51,9 @@ export function ContactSection() {
               href={link.href}
               target={link.label !== "Email" ? "_blank" : undefined}
               rel="noopener noreferrer"
-              className="flex items-center gap-4 p-4 bg-[#0e1018]/50 border border-[#1a1a2e] hover:bg-[#0e1018] hover:border-[#333] transition-all duration-200 group"
+              className="flex items-center gap-4 p-4 bg-[#111]/50 border border-[#1f1f1f] hover:bg-[#111] hover:border-[#333] transition-all duration-200 group"
             >
-              <div className="w-10 h-10 bg-[#08090d] border border-[#1a1a2e] flex items-center justify-center group-hover:border-[#333] transition-colors duration-200">
+              <div className="w-10 h-10 bg-[#0a0a0a] border border-[#1f1f1f] flex items-center justify-center group-hover:border-[#333] transition-colors duration-200">
                 <link.icon size={16} className="text-[#888] group-hover:text-[#f5f5f5] transition-colors duration-200" />
               </div>
               <div className="flex-1 min-w-0">
@@ -66,7 +66,7 @@ export function ContactSection() {
         </div>
 
         {/* Footer */}
-        <div className="reveal mt-24 pt-6 border-t border-[#1a1a2e] text-center">
+        <div className="reveal mt-24 pt-6 border-t border-[#1f1f1f] text-center">
           <p className="text-xs text-[#444] font-mono">
             &copy; 2026 Alden Ong &middot; Built with Next.js + Tailwind CSS
           </p>

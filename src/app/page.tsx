@@ -14,7 +14,7 @@ export default function Home() {
   useScrollReveal();
 
   return (
-    <div className="min-h-screen bg-[#08090d]">
+    <div className="min-h-screen bg-[#0a0a0a]">
       <Sidebar />
       <Navbar />
       <main className="lg:ml-[256px]">
