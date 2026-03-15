@@ -21,16 +21,12 @@ import {
 } from "react-icons/si";
 import { DiJava } from "react-icons/di";
 import { VscVscode } from "react-icons/vsc";
+import {
+  TbBrandAdobePhotoshop,
+  TbBrandAdobePremier,
+  TbBrandAdobeIllustrator,
+} from "react-icons/tb";
 import { techStack } from "@/lib/data";
-
-/* Placeholder icon for Adobe tools (not available in react-icons) */
-function AdobeIcon({ color }: { color: string }) {
-  return (
-    <span className="text-[10px] font-bold shrink-0 leading-none" style={{ color }}>
-      ◆
-    </span>
-  );
-}
 
 const skillIcons: Record<string, IconType> = {
   Java: DiJava,
@@ -51,13 +47,10 @@ const skillIcons: Record<string, IconType> = {
   "VS Code": VscVscode,
   Figma: SiFigma,
   "DaVinci Resolve": SiDavinciresolve,
-};
-
-const creativeColors: Record<string, string> = {
-  Photoshop: "#31A8FF",
-  "Premiere Pro": "#9999FF",
-  Illustrator: "#FF9A00",
-  Lightroom: "#31A8FF",
+  Photoshop: TbBrandAdobePhotoshop,
+  "Premiere Pro": TbBrandAdobePremier,
+  Illustrator: TbBrandAdobeIllustrator,
+  Lightroom: TbBrandAdobePhotoshop,
 };
 
 export function SkillsSection() {
@@ -92,17 +85,12 @@ export function SkillsSection() {
               <div className="flex flex-wrap gap-2">
                 {skills.map((skill) => {
                   const Icon = skillIcons[skill];
-                  const adobeColor = creativeColors[skill];
                   return (
                     <span
                       key={skill}
                       className="inline-flex items-center gap-1.5 px-3.5 py-2 bg-[#111] border border-[#1f1f1f] text-[#ccc] text-[15px] font-mono hover:border-[#333] hover:text-[#f5f5f5] transition-all duration-200"
                     >
-                      {Icon ? (
-                        <Icon size={14} className="text-[#888] shrink-0" />
-                      ) : adobeColor ? (
-                        <AdobeIcon color={adobeColor} />
-                      ) : null}
+                      {Icon && <Icon size={14} className="text-[#888] shrink-0" />}
                       {skill}
                     </span>
                   );
