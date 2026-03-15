@@ -61,7 +61,7 @@ export function SkillsSection() {
       <div className="max-w-[960px] mx-auto px-6 lg:px-16">
         {/* Dramatic heading */}
         <div className="reveal mb-10">
-          <h2 className="text-4xl sm:text-5xl font-bold text-[#f5f5f5] glow-white mb-2">
+          <h2 className="glow-reveal text-4xl sm:text-5xl font-bold text-[#f5f5f5] glow-white mb-2">
             what I{" "}
             <span className="text-[#a78bfa] glow-purple">work with</span>
           </h2>
@@ -72,7 +72,7 @@ export function SkillsSection() {
           {categories.map(([category, skills], i) => (
             <div
               key={category}
-              className={`reveal py-6 ${
+              className={`reveal-left py-6 ${
                 i < categories.length - 1 ? "border-b border-[#1a1a1a]" : ""
               }`}
             >
@@ -82,13 +82,13 @@ export function SkillsSection() {
               </p>
 
               {/* Skill badges with icons */}
-              <div className="flex flex-wrap gap-2">
+              <div className="reveal-stagger flex flex-wrap gap-2">
                 {skills.map((skill) => {
                   const Icon = skillIcons[skill];
                   return (
                     <span
                       key={skill}
-                      className="inline-flex items-center gap-1.5 px-3.5 py-2 bg-[#111] border border-[#1f1f1f] text-[#ccc] text-[15px] font-mono hover:border-[#333] hover:text-[#f5f5f5] transition-all duration-200"
+                      className="reveal-child glow-hover-accent inline-flex items-center gap-1.5 px-3.5 py-2 bg-[#111] border border-[#1f1f1f] text-[#ccc] text-[15px] font-mono hover:border-[#333] hover:text-[#f5f5f5] transition-all duration-200"
                     >
                       {Icon && <Icon size={14} className="text-[#888] shrink-0" />}
                       {skill}

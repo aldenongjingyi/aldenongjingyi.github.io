@@ -15,7 +15,7 @@ export function Navbar() {
 
   return (
     <>
-      <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-[#0a0a0a]/60 lg:left-[256px]">
+      <nav className="navbar-enter fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-[#0a0a0a]/60 lg:left-[256px]">
         <div className="px-6 h-12 flex items-center justify-between">
           {/* Left — Name with gradient asterisk */}
           <a

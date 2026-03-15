@@ -320,7 +320,7 @@ export function Sidebar() {
   ];
 
   return (
-    <aside className="hidden lg:flex fixed left-0 top-0 bottom-0 z-40">
+    <aside className="sidebar-enter hidden lg:flex fixed left-0 top-0 bottom-0 z-40">
       {/* Activity bar */}
       <div className="w-12 bg-[#080808] border-r border-[#1a1a1a] flex flex-col items-center py-3 gap-1">
         {activityItems.map((item, i) => (

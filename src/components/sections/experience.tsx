@@ -48,7 +48,7 @@ export function ExperienceSection() {
       <div className="max-w-[960px] mx-auto px-6 lg:px-16">
         {/* Heading */}
         <div className="reveal mb-14">
-          <h2 className="text-4xl sm:text-5xl font-bold text-[#f5f5f5] glow-white mb-3">
+          <h2 className="glow-reveal text-4xl sm:text-5xl font-bold text-[#f5f5f5] glow-white mb-3">
             work{" "}
             <span className="text-[#a78bfa] glow-purple">experience</span>
           </h2>
@@ -63,10 +63,10 @@ export function ExperienceSection() {
             const isCurrent = exp.date.includes("Present");
 
             return (
-              <div key={i} className="reveal">
+              <div key={i} className="reveal-left">
                 {/* Divider (not on first) */}
                 {i > 0 && (
-                  <div className="border-t border-[#1f1f1f] mx-0 my-0" />
+                  <div className="reveal-divider border-t border-[#1f1f1f] mx-0 my-0" />
                 )}
 
                 <div className="flex flex-col sm:flex-row gap-6 sm:gap-10 py-8">
@@ -89,7 +89,7 @@ export function ExperienceSection() {
                         <span className="text-[#f5f5f5]">{exp.role}</span>
                       </h3>
                       {isCurrent && (
-                        <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 bg-[#22c55e]/10 text-[#22c55e] text-[12px] font-mono rounded-full">
+                        <span className="glow-green inline-flex items-center gap-1.5 px-2.5 py-0.5 bg-[#22c55e]/10 text-[#22c55e] text-[12px] font-mono rounded-full">
                           <span className="w-1.5 h-1.5 rounded-full bg-[#22c55e] pulse-dot" />
                           Current
                         </span>
@@ -97,11 +97,11 @@ export function ExperienceSection() {
                     </div>
 
                     {/* Bullet points */}
-                    <ul className="space-y-2.5 mt-4">
+                    <ul className="reveal-stagger space-y-2.5 mt-4">
                       {exp.bullets.map((bullet, j) => (
                         <li
                           key={j}
-                          className="flex items-start gap-3 text-base text-[#999] leading-relaxed"
+                          className="reveal-child flex items-start gap-3 text-base text-[#999] leading-relaxed"
                         >
                           <span className="text-[#a78bfa] mt-[6px] shrink-0 text-[8px]">&#9679;</span>
                           {bullet}

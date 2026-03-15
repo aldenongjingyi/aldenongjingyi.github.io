@@ -1,7 +1,32 @@
 "use client";
 
+import { useRef, useEffect, useState } from "react";
+import { useInView, useSpring, useMotionValue } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { projects } from "@/lib/data";
+
+function AnimatedCounter({ value }: { value: number }) {
+  const ref = useRef<HTMLSpanElement>(null);
+  const isInView = useInView(ref, { once: true });
+  const motionValue = useMotionValue(0);
+  const springValue = useSpring(motionValue, { stiffness: 40, damping: 15 });
+  const [display, setDisplay] = useState(0);
+
+  useEffect(() => {
+    if (isInView) {
+      motionValue.set(value);
+    }
+  }, [isInView, value, motionValue]);
+
+  useEffect(() => {
+    const unsubscribe = springValue.on("change", (latest) => {
+      setDisplay(Math.round(latest));
+    });
+    return unsubscribe;
+  }, [springValue]);
+
+  return <span ref={ref}>{display}</span>;
+}
 
 const projectStyles = [
   { color: "#1e3a5f", label: "human activity recognition" },
@@ -16,10 +41,10 @@ export function ProjectsSection() {
       <div className="max-w-[960px] mx-auto px-6 lg:px-16">
         {/* Heading with count */}
         <div className="reveal mb-10">
-          <h2 className="text-4xl sm:text-5xl font-bold text-[#f5f5f5] glow-white">
+          <h2 className="glow-reveal text-4xl sm:text-5xl font-bold text-[#f5f5f5] glow-white">
             projects{" "}
             <span className="text-[#a78bfa] glow-purple font-mono text-3xl sm:text-4xl">
-              [{projects.length}]
+              [<AnimatedCounter value={projects.length} />]
             </span>
           </h2>
         </div>
@@ -34,7 +59,8 @@ export function ProjectsSection() {
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="reveal block bg-[#111] border border-[#1f1f1f] overflow-hidden hover:border-[#333] hover:-translate-y-0.5 transition-all duration-200 group"
+                className="reveal-left glow-hover-purple block bg-[#111] border border-[#1f1f1f] overflow-hidden hover:border-[#333] hover:-translate-y-0.5 transition-all duration-200 group"
+                style={{ transitionDelay: `${i * 0.15}s` }}
               >
                 {/* Styled preview card */}
                 <div

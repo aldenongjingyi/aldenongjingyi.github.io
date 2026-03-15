@@ -134,13 +134,13 @@ export function HeroSection() {
 
         {/* Social icons */}
         <div className="animate-in stagger-4 flex items-center gap-5 mb-10">
-          <a href="https://github.com/aldenongjingyi" target="_blank" rel="noopener noreferrer" className="text-[#555] hover:text-[#f5f5f5] transition-colors duration-200" aria-label="GitHub">
+          <a href="https://github.com/aldenongjingyi" target="_blank" rel="noopener noreferrer" className="social-icon-hover text-[#555] hover:text-[#f5f5f5] transition-colors duration-200" aria-label="GitHub">
             <Github size={20} />
           </a>
-          <a href="https://linkedin.com/in/aldenong123" target="_blank" rel="noopener noreferrer" className="text-[#555] hover:text-[#f5f5f5] transition-colors duration-200" aria-label="LinkedIn">
+          <a href="https://linkedin.com/in/aldenong123" target="_blank" rel="noopener noreferrer" className="social-icon-hover text-[#555] hover:text-[#f5f5f5] transition-colors duration-200" aria-label="LinkedIn">
             <Linkedin size={20} />
           </a>
-          <a href="https://www.instagram.com/aldenojy/" target="_blank" rel="noopener noreferrer" className="text-[#555] hover:text-[#f5f5f5] transition-colors duration-200" aria-label="Instagram">
+          <a href="https://www.instagram.com/aldenojy/" target="_blank" rel="noopener noreferrer" className="social-icon-hover text-[#555] hover:text-[#f5f5f5] transition-colors duration-200" aria-label="Instagram">
             <Instagram size={20} />
           </a>
         </div>

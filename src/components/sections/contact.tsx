@@ -35,7 +35,7 @@ export function ContactSection() {
       <div className="max-w-[960px] mx-auto px-6 lg:px-16">
         {/* Heading */}
         <div className="reveal mb-12">
-          <h2 className="text-4xl sm:text-5xl font-bold text-[#f5f5f5] glow-white mb-2">
+          <h2 className="glow-reveal text-4xl sm:text-5xl font-bold text-[#f5f5f5] glow-white mb-2">
             get in <span className="text-[#a78bfa] glow-purple">touch</span>
           </h2>
           <p className="text-sm text-[#888]">
@@ -44,14 +44,14 @@ export function ContactSection() {
         </div>
 
         {/* Contact links */}
-        <div className="reveal grid grid-cols-1 sm:grid-cols-2 gap-2">
+        <div className="reveal-stagger grid grid-cols-1 sm:grid-cols-2 gap-2">
           {links.map((link) => (
             <a
               key={link.label}
               href={link.href}
               target={link.label !== "Email" ? "_blank" : undefined}
               rel="noopener noreferrer"
-              className="flex items-center gap-4 p-4 bg-[#111]/50 border border-[#1f1f1f] hover:bg-[#111] hover:border-[#333] transition-all duration-200 group"
+              className="reveal-child glow-hover-purple flex items-center gap-4 p-4 bg-[#111]/50 border border-[#1f1f1f] hover:bg-[#111] hover:border-[#333] transition-all duration-200 group"
             >
               <div className="w-10 h-10 bg-[#0a0a0a] border border-[#1f1f1f] flex items-center justify-center group-hover:border-[#333] transition-colors duration-200">
                 <link.icon size={16} className="text-[#888] group-hover:text-[#f5f5f5] transition-colors duration-200" />
