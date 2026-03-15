@@ -33,35 +33,22 @@ function ParticleDots() {
 
 function CurrentlyWidget() {
   return (
-    <div
-      className="animate-in w-full rounded-lg"
-      style={{
-        maxWidth: 340,
-        background: "#0d0d0d",
-        border: "1px solid #1f1f1f",
-        borderRadius: 8,
-        padding: "16px 20px",
-        animationDelay: "360ms",
-      }}
-    >
-      <p
-        className="font-mono uppercase"
-        style={{ fontSize: 10, color: "#444", letterSpacing: "0.1em", marginBottom: 12 }}
-      >
+    <div className="max-w-[360px] bg-[#111]/50 border border-[#1f1f1f] p-5 hover:border-[#333] transition-colors duration-200">
+      <p className="text-[11px] font-mono text-[#555] uppercase tracking-widest mb-3">
         currently
       </p>
-      <div className="flex flex-col" style={{ gap: 6 }}>
-        <div className="flex items-center" style={{ gap: 8 }}>
+      <div className="space-y-2.5">
+        <div className="flex items-center gap-2.5">
           <span className="w-1.5 h-1.5 rounded-full bg-[#22c55e] shrink-0" />
-          <span className="font-mono" style={{ fontSize: 13, color: "#777" }}>Kuala Lumpur, MY</span>
+          <span className="text-[13px] font-mono text-[#888]">Kuala Lumpur, MY</span>
         </div>
-        <div className="flex items-center" style={{ gap: 8 }}>
+        <div className="flex items-center gap-2.5">
           <span className="w-1.5 h-1.5 rounded-full bg-[#a78bfa] shrink-0 pulse-dot" />
-          <span className="font-mono" style={{ fontSize: 13, color: "#777" }}>Software Dev @ Map72</span>
+          <span className="text-[13px] font-mono text-[#888]">Software Dev @ Map72</span>
         </div>
-        <div className="flex items-center" style={{ gap: 8 }}>
+        <div className="flex items-center gap-2.5">
           <span className="w-1.5 h-1.5 rounded-full bg-[#60a5fa] shrink-0" />
-          <span className="font-mono" style={{ fontSize: 13, color: "#777" }}>making content, chasing ideas</span>
+          <span className="text-[13px] font-mono text-[#888]">making content, chasing ideas</span>
         </div>
       </div>
     </div>
@@ -73,112 +60,94 @@ export function HeroSection() {
     <section
       id="about"
       className="relative min-h-screen flex items-center"
-      style={{ paddingBottom: 80 }}
     >
       <ParticleDots />
 
-      <div className="w-full max-w-[960px] mx-auto px-6 lg:px-16">
-        {/* Two-column layout: row on md+, column on mobile */}
-        <div className="flex flex-col md:flex-row items-start" style={{ gap: 64 }}>
-
-          {/* ── Left column ── */}
+      <div className="w-full max-w-[960px] mx-auto px-6 lg:px-16 py-16">
+        {/* Avatar */}
+        <div className="animate-in stagger-1 mb-8">
           <div
-            className="flex flex-col items-center md:items-start text-center md:text-left w-full md:w-[42%] shrink-0"
-            style={{ gap: 20 }}
+            className="w-24 h-24 rounded-full p-[3px] bg-gradient-to-br from-[#a78bfa] to-[#60a5fa]"
+            style={{ boxShadow: "0 0 40px rgba(167, 139, 250, 0.15)" }}
           >
-            {/* Avatar */}
-            <div className="animate-in stagger-1 relative">
-              <div
-                className="w-[80px] h-[80px] rounded-full p-[3px] bg-gradient-to-br from-[#a78bfa] to-[#60a5fa]"
-                style={{ boxShadow: "0 0 40px rgba(167, 139, 250, 0.15)" }}
-              >
-                <Image
-                  src="/avatar.jpg"
-                  alt="Alden Ong"
-                  width={74}
-                  height={74}
-                  className="rounded-full object-cover w-[74px] h-[74px]"
-                />
-              </div>
-            </div>
-
-            {/* Name */}
-            <h1
-              className="animate-in stagger-2 font-mono font-bold text-[#f5f5f5] glow-white"
-              style={{ fontSize: "clamp(32px, 4vw, 48px)", letterSpacing: "-0.02em" }}
-            >
-              Alden Ong
-            </h1>
-
-            {/* Role */}
-            <p
-              className="animate-in stagger-3 font-mono text-[#a78bfa] glow-purple"
-              style={{ fontSize: 16, letterSpacing: "0.08em" }}
-            >
-              fullstack software <span className="text-[#8b6fdb]">developer.</span>
-            </p>
-
-            {/* Education */}
-            <div className="animate-in stagger-3">
-              <p className="font-mono text-[#555]" style={{ fontSize: 13, lineHeight: 1.6 }}>
-                BSc (Hons) Computer Science{" "}
-                <span className="text-[#555]" style={{ fontSize: 11 }}>Sunway University</span>
-              </p>
-              <p className="font-mono text-[#555]" style={{ fontSize: 13, lineHeight: 1.6 }}>
-                Masters in Business Administration{" "}
-                <span className="text-[#555]" style={{ fontSize: 11 }}>Taylor&apos;s University</span>
-              </p>
-            </div>
-
-            {/* Social icons */}
-            <div className="animate-in stagger-5 flex items-center" style={{ gap: 20 }}>
-              <a href="https://github.com/aldenongjingyi" target="_blank" rel="noopener noreferrer" className="text-[#555] hover:text-[#aaa] transition-colors duration-200" aria-label="GitHub"><Github size={18} /></a>
-              <a href="https://linkedin.com/in/aldenong123" target="_blank" rel="noopener noreferrer" className="text-[#555] hover:text-[#aaa] transition-colors duration-200" aria-label="LinkedIn"><Linkedin size={18} /></a>
-              <a href="https://www.instagram.com/aldenojy/" target="_blank" rel="noopener noreferrer" className="text-[#555] hover:text-[#aaa] transition-colors duration-200" aria-label="Instagram"><Instagram size={18} /></a>
-            </div>
+            <Image
+              src="/avatar.jpg"
+              alt="Alden Ong"
+              width={90}
+              height={90}
+              className="rounded-full object-cover w-[90px] h-[90px]"
+            />
           </div>
+        </div>
 
-          {/* ── Right column ── */}
-          <div className="flex flex-col flex-1 w-full" style={{ gap: 32, paddingTop: 8 }}>
-            {/* Bio */}
-            <div className="animate-in stagger-4">
-              <p style={{ fontSize: 17, lineHeight: 1.8, letterSpacing: "0.01em", color: "#999", maxWidth: 480 }}>
-                Curious about how things work, happiest when shipping. Fullstack
-                developer at Map Seventy Two, building web and mobile products.
-                Outside work I make content, document life, and chase ideas worth building.
-              </p>
-            </div>
+        {/* Name — matches section heading style */}
+        <h1 className="animate-in stagger-2 text-4xl sm:text-5xl font-bold text-[#f5f5f5] glow-white mb-3">
+          Alden Ong
+        </h1>
 
-            {/* CTA Buttons */}
-            <div className="animate-in stagger-5 flex items-center" style={{ gap: 12 }}>
-              <a
-                href="/resume.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 font-mono text-[#888] hover:text-[#ccc] transition-all duration-200"
-                style={{ padding: "10px 20px", fontSize: 14, border: "1px solid #333" }}
-                onMouseEnter={(e) => { e.currentTarget.style.borderColor = "#555"; }}
-                onMouseLeave={(e) => { e.currentTarget.style.borderColor = "#333"; }}
-              >
-                <FileText size={14} />
-                resume &#x2197;
-              </a>
-              <a
-                href="#contact"
-                className="inline-flex items-center gap-2 font-mono text-[#a78bfa] hover:text-[#c4b5fd] transition-all duration-200"
-                style={{ padding: "10px 20px", fontSize: 14, border: "1px solid rgba(167, 139, 250, 0.27)" }}
-                onMouseEnter={(e) => { e.currentTarget.style.borderColor = "#a78bfa"; }}
-                onMouseLeave={(e) => { e.currentTarget.style.borderColor = "rgba(167, 139, 250, 0.27)"; }}
-              >
-                <Send size={14} />
-                get in touch
-              </a>
-            </div>
+        {/* Role — purple accent, monospace like nav labels */}
+        <p
+          className="animate-in stagger-2 text-lg sm:text-xl font-mono text-[#a78bfa] glow-purple mb-10"
+          style={{ letterSpacing: "0.05em" }}
+        >
+          fullstack software <span className="text-[#8b6fdb]">developer.</span>
+        </p>
 
-            {/* Currently widget */}
-            <CurrentlyWidget />
-          </div>
+        {/* Bio — same body text style as experience bullets */}
+        <p className="animate-in stagger-3 text-[15px] text-[#999] leading-relaxed max-w-[520px] mb-6">
+          Curious about how things work, happiest when shipping. Fullstack
+          developer at Map Seventy Two, building web and mobile products.
+          Outside work I make content, document life, and chase ideas worth building.
+        </p>
 
+        {/* Education — metadata style matching experience dates */}
+        <div className="animate-in stagger-3 mb-10 space-y-1">
+          <p className="text-[13px] font-mono text-[#888]">
+            BSc (Hons) Computer Science{" "}
+            <span className="text-[#555] text-[11px]">Sunway University</span>
+          </p>
+          <p className="text-[13px] font-mono text-[#888]">
+            Masters in Business Administration{" "}
+            <span className="text-[#555] text-[11px]">Taylor&apos;s University</span>
+          </p>
+        </div>
+
+        {/* CTA Buttons — card/tag surface style */}
+        <div className="animate-in stagger-4 flex flex-wrap items-center gap-3 mb-4">
+          <a
+            href="/resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#111] border border-[#1f1f1f] text-[#ccc] text-sm font-mono hover:border-[#333] hover:text-[#f5f5f5] transition-all duration-200"
+          >
+            <FileText size={14} />
+            resume &#x2197;
+          </a>
+          <a
+            href="#contact"
+            className="inline-flex items-center gap-2 px-5 py-2.5 border border-[#a78bfa]/25 text-[#a78bfa] text-sm font-mono hover:border-[#a78bfa] hover:text-[#c4b5fd] transition-all duration-200"
+          >
+            <Send size={14} />
+            get in touch
+          </a>
+        </div>
+
+        {/* Social icons */}
+        <div className="animate-in stagger-4 flex items-center gap-5 mb-10">
+          <a href="https://github.com/aldenongjingyi" target="_blank" rel="noopener noreferrer" className="text-[#555] hover:text-[#f5f5f5] transition-colors duration-200" aria-label="GitHub">
+            <Github size={18} />
+          </a>
+          <a href="https://linkedin.com/in/aldenong123" target="_blank" rel="noopener noreferrer" className="text-[#555] hover:text-[#f5f5f5] transition-colors duration-200" aria-label="LinkedIn">
+            <Linkedin size={18} />
+          </a>
+          <a href="https://www.instagram.com/aldenojy/" target="_blank" rel="noopener noreferrer" className="text-[#555] hover:text-[#f5f5f5] transition-colors duration-200" aria-label="Instagram">
+            <Instagram size={18} />
+          </a>
+        </div>
+
+        {/* Currently widget — card style matching contact section */}
+        <div className="animate-in stagger-5">
+          <CurrentlyWidget />
         </div>
       </div>
 
