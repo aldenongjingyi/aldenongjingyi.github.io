@@ -34,21 +34,21 @@ function ParticleDots() {
 function CurrentlyWidget() {
   return (
     <div className="max-w-[360px] bg-[#111]/50 border border-[#1f1f1f] p-5 hover:border-[#333] transition-colors duration-200">
-      <p className="text-[11px] font-mono text-[#555] uppercase tracking-widest mb-3">
+      <p className="text-[12px] font-mono text-[#555] uppercase tracking-widest mb-3">
         currently
       </p>
       <div className="space-y-2.5">
         <div className="flex items-center gap-2.5">
           <span className="w-1.5 h-1.5 rounded-full bg-[#22c55e] shrink-0" />
-          <span className="text-[13px] font-mono text-[#888]">Kuala Lumpur, MY</span>
+          <span className="text-sm font-mono text-[#888]">Kuala Lumpur, MY</span>
         </div>
         <div className="flex items-center gap-2.5">
           <span className="w-1.5 h-1.5 rounded-full bg-[#a78bfa] shrink-0 pulse-dot" />
-          <span className="text-[13px] font-mono text-[#888]">Software Dev @ Map72</span>
+          <span className="text-sm font-mono text-[#888]">Software Dev @ Map72</span>
         </div>
         <div className="flex items-center gap-2.5">
           <span className="w-1.5 h-1.5 rounded-full bg-[#60a5fa] shrink-0" />
-          <span className="text-[13px] font-mono text-[#888]">making content, chasing ideas</span>
+          <span className="text-sm font-mono text-[#888]">making content, chasing ideas</span>
         </div>
       </div>
     </div>
@@ -94,7 +94,7 @@ export function HeroSection() {
         </p>
 
         {/* Bio — same body text style as experience bullets */}
-        <p className="animate-in stagger-3 text-[15px] text-[#999] leading-relaxed max-w-[520px] mb-6">
+        <p className="animate-in stagger-3 text-base sm:text-lg text-[#999] leading-relaxed max-w-[540px] mb-6">
           Curious about how things work, happiest when shipping. Fullstack
           developer at Map Seventy Two, building web and mobile products.
           Outside work I make content, document life, and chase ideas worth building.
@@ -102,13 +102,13 @@ export function HeroSection() {
 
         {/* Education — metadata style matching experience dates */}
         <div className="animate-in stagger-3 mb-10 space-y-1">
-          <p className="text-[13px] font-mono text-[#888]">
+          <p className="text-sm font-mono text-[#888]">
             BSc (Hons) Computer Science{" "}
-            <span className="text-[#555] text-[11px]">Sunway University</span>
+            <span className="text-[#555] text-[12px]">Sunway University</span>
           </p>
-          <p className="text-[13px] font-mono text-[#888]">
+          <p className="text-sm font-mono text-[#888]">
             Masters in Business Administration{" "}
-            <span className="text-[#555] text-[11px]">Taylor&apos;s University</span>
+            <span className="text-[#555] text-[12px]">Taylor&apos;s University</span>
           </p>
         </div>
 
@@ -118,16 +118,16 @@ export function HeroSection() {
             href="/resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#111] border border-[#1f1f1f] text-[#ccc] text-sm font-mono hover:border-[#333] hover:text-[#f5f5f5] transition-all duration-200"
+            className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#111] border border-[#1f1f1f] text-[#ccc] text-[15px] font-mono hover:border-[#333] hover:text-[#f5f5f5] transition-all duration-200"
           >
-            <FileText size={14} />
+            <FileText size={15} />
             resume &#x2197;
           </a>
           <a
             href="#contact"
-            className="inline-flex items-center gap-2 px-5 py-2.5 border border-[#a78bfa]/25 text-[#a78bfa] text-sm font-mono hover:border-[#a78bfa] hover:text-[#c4b5fd] transition-all duration-200"
+            className="inline-flex items-center gap-2 px-5 py-2.5 border border-[#a78bfa]/25 text-[#a78bfa] text-[15px] font-mono hover:border-[#a78bfa] hover:text-[#c4b5fd] transition-all duration-200"
           >
-            <Send size={14} />
+            <Send size={15} />
             get in touch
           </a>
         </div>
@@ -135,13 +135,13 @@ export function HeroSection() {
         {/* Social icons */}
         <div className="animate-in stagger-4 flex items-center gap-5 mb-10">
           <a href="https://github.com/aldenongjingyi" target="_blank" rel="noopener noreferrer" className="text-[#555] hover:text-[#f5f5f5] transition-colors duration-200" aria-label="GitHub">
-            <Github size={18} />
+            <Github size={20} />
           </a>
           <a href="https://linkedin.com/in/aldenong123" target="_blank" rel="noopener noreferrer" className="text-[#555] hover:text-[#f5f5f5] transition-colors duration-200" aria-label="LinkedIn">
-            <Linkedin size={18} />
+            <Linkedin size={20} />
           </a>
           <a href="https://www.instagram.com/aldenojy/" target="_blank" rel="noopener noreferrer" className="text-[#555] hover:text-[#f5f5f5] transition-colors duration-200" aria-label="Instagram">
-            <Instagram size={18} />
+            <Instagram size={20} />
           </a>
         </div>
 
